@@ -1,0 +1,720 @@
+/*全体*/
+body {
+    font-family: "Noto Sans JP", "Roboto" ;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: bottom;
+    }
+
+li {
+    list-style: none;
+}
+
+
+
+/*レイアウト*/
+.container {
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 0 30px;
+}
+
+/*ヘッダー*/
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 70px;
+    
+}
+
+.logo {
+    text-align: center;
+}
+
+nav {
+    text-align: right;
+}
+
+ul {
+    display: flex;
+    justify-content: right;
+    margin: 0;
+}
+
+.gnav_item {
+    font-size: 16px;
+    margin-right: 30px;
+    color: #151515;
+    font-weight: bold;
+}
+
+.gnav_home{
+    color: #DD1B57;
+
+}
+
+.btn-menu {
+    display: none;
+}
+
+
+/*ニュース*/
+.news {
+    padding: 60px 0 70px 0;
+    vertical-align: top
+}
+
+.news .container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.contianer_top {
+    font-weight: black;
+    font-size: 40px;
+    color: #DD1B57;
+    letter-spacing: 0.03rem;
+    margin: 0;
+    line-height: 1;
+    white-space: nowrap
+}
+
+.news ul{
+    display: flex; 
+    flex-flow: column;
+}
+
+.news_item {
+    padding-bottom: 16px;
+    margin-bottom: 16px;
+    border-bottom: 1px solid #e8e8e8;
+}
+
+.news .date {
+    margin-right: 40px;
+    color: #151515;
+
+}
+
+ .news .title {
+    max-width: 744px;
+    color: #151515;
+
+ }
+
+.news_link{
+    display: flex; 
+}
+
+
+/*メインビジュアル*/
+.mv {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 600px;
+    background-image: url(image/pc_bg_mv.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+.mv_title {
+    font-size: 160px;
+    font-weight: bold;
+    line-height: 1;
+    margin: 0;
+    text-shadow: 0 4px 6px rgb(0 0 0 / 25%);
+    font-family: "Roboto";
+  }
+
+.mv_subtitle{
+    letter-spacing: 0.1rem;
+    font-size: 24px;
+    margin-top: 8px;
+    text-shadow: 0 3px 6px rgb(0 0 0 / 25%);
+}
+
+/*サービス*/
+
+.service {
+    padding-bottom: 100px ;
+    
+}
+
+.service_heading{
+    position: relative;
+    margin-bottom: 50px;
+
+}
+
+.service .list {
+    display: grid;
+    column-gap: 30px;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.service .item {
+    display: block;
+    position: relative;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    padding: 50px;
+    box-shadow: 0 3px 21px #00000033;
+    border-radius: 8px;
+    background-color: #fff;
+}
+
+.servie_title {
+    font-size: 18px;
+    color: #151515;
+    margin: 3px 0 16px 0;
+}
+
+.servie_text {
+    font-size: 14px;
+    color: #151515;
+    letter-spacing: 0.04rem;
+    line-height: 1.7;
+    font-weight: lighter;
+    text-align: left;
+}
+
+.service_heading::before {
+    display: block;
+    content: "SERVICE";
+    position: absolute;
+    top: -40px;
+    z-index: -1;
+    right: -20px;
+    font-size: 168px;
+    font-weight: bold;
+    line-height: 1;
+    color: #f2f2f2;
+    font-family: "Roboto";
+    
+}
+
+
+/*フッター*/
+footer {
+    background-color: #DD1B57 ;
+    width: 100%;
+    padding: 60px 0px 50px 0px;
+}
+
+.footer_nav {
+    justify-content: left;
+    font-size: 14px;
+    letter-spacing: 0.05em;
+    padding: 0;
+}
+
+.footer_list {
+    margin-right: 40px;
+    color: #FFFFFF;
+    font-weight: bold;
+}
+
+.footer_copyright {
+    color: #FFFFFF;
+    font-size: 12px;
+    margin-top: 18px;
+    letter-spacing: 0.03em;
+}
+
+/**スマホ版
+*/
+@media screen and (max-width: 767px) {
+    body {
+      font-size: 15px;
+      line-height: 1.7;
+   }
+
+   .container {
+    padding: 0 20px;
+   }
+
+   header {
+    justify-content: space-between;
+    padding: 20px;
+    
+}
+
+.nav_show {
+    display: block;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 10;
+    width: 180px;
+    height: 100%;
+    background-color: #DD1B57;
+    box-shadow: -10px 0 35px -20px rgb(0 0 0 / 25%);
+}
+
+
+nav ul {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 180px;
+    padding: 90px 20px 20px 50px;
+    row-gap: 25px;
+}
+
+.gnav_item {
+    color: #fff;
+}
+
+.gnav_home {
+    color: #fff;
+    opacity: 0.6;
+}
+
+.logo {
+    width: 107px;
+    height: 20px;
+    line-height: 1;
+}
+
+.btn-menu {
+    display: flex;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 100;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    padding: 21px 16px;
+    border: none;
+    outline: none;
+    background-color: #DD1B57;
+    cursor: pointer;
+    appearance: none;
+}
+
+.btn-menu_line {
+    display: block;
+    position: relative;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    border-radius: 4px;
+    background-color: #fff;
+}
+
+.btn-menu_line::before, .btn-menu_line::after {
+    display: block;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transition: inherit;
+    border-radius: 4px;
+    background-color: #fff;
+}
+
+
+.btn-menu_line::before {
+    top: -8px;
+}
+
+.btn-menu_line::after {
+    top: 8px;
+}
+   .mv {
+    height: 460px;
+    background-image: url(./image/sp_mv.png);
+}
+
+
+.mv_title {
+    font-size: 80px;
+}
+
+.mv_subtitle{
+    font-size: 20px;
+    margin-top: 0px;
+}
+
+
+.news {
+    padding: 30px 0 0 0;
+}
+
+.news .container {
+    display: block;
+}
+
+.contianer_top {
+    font-size: 32px;
+}
+
+.news .contianer_top{
+    margin-bottom: 20px;
+}
+.news .date {
+    margin-right: 0px;
+    color: #151515;
+
+}
+
+.news ul {
+    padding: 0px;
+}
+ .news .title {
+    color: #151515;
+ }
+
+.news_link{
+    display: block; 
+}
+
+.service {
+    padding: 60px 0 40px 0;
+    
+}
+
+.service_heading{
+    position: relative;
+    margin-bottom: 20px;
+
+}
+
+.service .list {
+    display: block;
+    column-gap: 0px;
+    grid-template-columns: 1;
+}
+
+.service .item {
+    font-size: 14px;
+    padding: 40px;
+    margin-bottom: 20px;
+}
+
+.servie_title {
+    font-size: 16px;
+    margin: 3px 0 16px 0;
+}
+
+.service_heading::before {
+    top: 0px;
+    z-index: -1;
+    top: px;
+    right: -30px;
+    font-size: 70px;    
+}
+
+footer {
+    padding: 40px 0px 30px 0px;
+}
+
+.footer_nav {
+    margin-bottom: 20px;
+    font-size: 14px;
+    letter-spacing: 0.05em;
+}
+
+.footer_list {
+    margin-right: 25px;
+    color: #FFFFFF;
+    font-weight: bold;
+}
+
+.footer_copyright {
+    font-size: 10px;
+}
+
+}
+
+
+/*メッセージ*/
+.gnav_message_message{
+    color: #DD1B57;
+
+}
+
+/*message_mv*/
+.message_mv {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 190px;
+    background-image: url(image/pc_header.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+.message_mv_title {
+    font-size: 40px;
+    font-weight: bold;
+    line-height: 1;
+    margin: 0;
+    text-shadow: 0 3px 6px rgb(0 0 0 / 25%);
+  }
+
+/*message_main*/
+.message_conainer {
+    text-align: center;
+}
+
+.message_title {
+    font-size: 40px;
+
+    color: #DD1B57;
+    letter-spacing: 0.05rem;
+    line-height: 1.5;
+    padding: 60px 0 20px 0;
+}
+
+.message_subtitle {
+    color: #151515;
+    letter-spacing: 0.05rem;
+}
+
+.ceo_pic{
+    float: left;
+    margin: 0 25px 25px 0;
+}
+
+.ceo_message {
+    padding: 0 160px;
+    color: #151515;
+    letter-spacing: 0.05rem;
+    line-height: 1.6;
+    font-size: 16px;
+    text-align: left;
+    padding: 40px 0 80px;
+}
+
+.office_img {
+    padding-bottom: 100px;
+}
+
+/**スマホ版
+*/
+@media screen and (max-width: 767px) {
+    body {
+      font-size: 15px;
+      line-height: 1.7;
+   }
+
+   .gnav_message_message {
+    color: #fff;
+    opacity: 0.6;
+}
+
+   .message_mv {
+    height: 460px;
+    background-image: url(./image/sp_header.png);
+    }
+
+    .message_title {
+        font-size: 24px;
+        padding: 30px 0 20px 0;
+    }
+    
+    .message_subtitle {
+        color: #151515;
+        letter-spacing: 0.05rem;
+    }
+    
+    .ceo_pic{
+        margin: 0 15px 15px 0;
+    }
+    
+    .ceo_message {
+        font-size: 15px;
+        padding: 30px 0 50px;
+    }
+    
+    .office_img {
+        padding-bottom: 50px;
+    }
+}
+
+
+
+
+/*会社概要*/
+
+
+/*about_mv*/
+.about_mv {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 190px;
+    background-image: url(image/pc_header.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+.about_mv_title {
+    font-size: 40px;
+    font-weight: bold;
+    line-height: 1;
+    margin: 0;
+    text-shadow: 0 3px 6px rgb(0 0 0 / 25%);
+  }
+
+
+/*about*/
+.gnav_about_about{
+    color: #DD1B57;
+
+}
+
+.about {
+    padding: 60px 0 70px 0;
+    vertical-align: top
+}
+
+.about_item {
+    padding-bottom: 16px;
+    margin-bottom: 16px;
+    border-bottom: 1px solid #e8e8e8;
+    display: flex;
+}
+
+.about ul{
+    display: flex; 
+    flex-flow: column;
+}
+
+
+
+.about_item_title {
+    margin-right: 40px;
+    margin-left: 30px;
+    color: #151515;
+    width: 100px;
+
+}
+
+ .about_item_text {
+    max-width: 744px;
+    color: #151515;
+
+ }
+
+ /*google_map*/
+.about_map iframe {
+    height: 400px;
+}
+
+.google_map_text{
+    margin-top: 20px;
+    text-align: right;
+    color: #349BF4;
+    text-decoration: underline;
+    font-size: 15px;
+}
+
+.about_news {
+    padding: 80px 0 100px 0;
+    vertical-align: top
+}
+
+.about_news_item {
+    padding-bottom: 16px;
+    margin-bottom: 16px;
+    border-bottom: 1px solid #e8e8e8;
+    display: flex;
+}
+
+.about_news ul{
+    display: flex; 
+    flex-flow: column;
+}
+
+.about_news_link {
+    display: flex; 
+
+}
+
+
+.about_news_date {
+    margin-right: 40px;
+    color: #151515;
+    width: 100px;
+
+}
+
+ .about_news_title {
+    max-width: 744px;
+    color: #151515;
+
+ }
+
+
+ /**スマホ版
+*/
+@media screen and (max-width: 767px) {
+    body {
+      font-size: 14px;
+      line-height: 1.7;
+   }
+
+   .gnav_about_about {
+    color: #fff;
+    opacity: 0.6;
+ }
+
+   .about_mv {
+    height: 460px;
+    background-image: url(./image/sp_header.png);
+    }
+
+    .about {
+        padding: 55px 0 50px 0;
+        vertical-align: top
+    }
+    
+    .about_item {
+        padding-bottom: 20px;
+        margin-bottom: 20px;
+        border-bottom: 1px solid #e8e8e8;
+        display: flex;
+    }
+    
+    .about ul{
+        display: flex; 
+        flex-flow: column;
+        padding: 0;
+    }
+    
+    
+    
+    .about_item_title {
+        margin-right: 40px;
+        margin-left: 0px;
+        width: 70px;
+    
+    }
+
+}
